@@ -525,52 +525,112 @@ hr {
 
 /* Graphic Design Gallery */
 
-.graphicGallery{
-  margin-left: 258px;
+.designGallery {
+  display: block;
+  margin-left: 220px;
+  margin-right: 5px;
   outline: 2px solid red;
-  margin-right: 20px;
+  justify-content: center;
 }
 
-.gallery {
+.designGallery h1 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 6px;
+  
+}
+
+.grid-wrapper {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.image-grid {
   display: grid;
-  min-height: 600px;
-  height: 600px;
-  grid-template-columns: 300px 300px;
-  grid-template-rows: 300px 300px;
+  grid-template-columns: repeat(6 1fr);
+  grid-template-rows: repeat(8 1fr);
+  row-gap: 1px;
+  column-gap: 1px;
   grid-template-areas: 
-  "galleryItem_1 galleryItem_2"
-  "galleryItem_3 galleryItem_4";
+      "pageTitle pageTitle pageTitle row1Col-6 solidified solidified "
+      "avalanche avalanche sausagequest row2Col-4 leftReckoning leftReckoning"
+      "avalanche avalanche row3Col-3 row3Col-4 leftReckoning leftReckoning"
+      "row4Col-1 shel shel row4Col-4 row4Col-5 row4Col-6"
+      "row5Col-1 shel shel row5Col-4 row5Col-5 row5Col-6"
+      "row6Col-1 row6Col-2 row6Col-3 row6Col-4 row6Col-5 row6Col-6"
+      "row7Col-1 row7Col-2 row7Col-3 row7Col-4 row7Col-5 row7Col-6"
+      "row8Col-1 row8Col-2 row8Col-3 row8Col-4 row8Col-5 row8Col-6";
 }
 
-.galleryItem_1 {
-  grid-area: galleryItem_1;
-  grid-column-start: 1;
-  background-color: #818181;
-  width: 300px;
-  height: 300px;
+
+
+
+.galleryItem {
+  min-height: 1vw;
+  min-width: 1vw;
+  outline: 2px solid red;
+  transition:transform .2s ease-in-out;
+  background-position: center;
+  background-size: cover;
+  margin: 3px;
 }
 
-.galleryItem_2 {
-  grid-area: galleryItem_2;
-  background-color: #818181;
-  width: 300px;
-  height: 300px;
+#pageTitle {
+  grid-area: pageTitle;
+  background-color: #161616;
+  color: #f1f1f1;
+  
 }
 
-.galleryItem_3 {
-  grid-area: galleryItem_3;
-  background-color: #818181;
-  width: 300px;
-  height: 300px;
+
+#Shel {
+  background-image:url(/image/graphic_design_gallery/graphic_preview/shel_preview.png);
+  grid-area: shel;
+  aspect-ratio: 1;
 }
 
-.galleryItem_4 {
-  grid-area: galleryItem_4;
-  background-color: #818181;
-  width: 300px;
-  height: 300px;
+#SausageQuest {
+  background-image:url(/image/graphic_design_gallery/graphic_preview/sausage_quest_preview.png);
+  grid-area: sausagequest;
+  aspect-ratio: 1;
+  
 }
 
+#Avalanche {
+  background-image:url(/image/graphic_design_gallery/graphic_preview/avalanche_preview.jpg);
+  grid-area: avalanche;
+  aspect-ratio: 1;
+}
+
+#Left-Reckoning {
+  background-image:url(/image/graphic_design_gallery/left_reckoning.png);
+  grid-area: leftReckoning;
+  aspect-ratio: 1;
+}
+
+#Solidified {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/solidified_preview.jpg);
+  grid-area: solidified;
+  aspect-ratio: inherit;
+}
+
+.galleryItem p{
+  display: none;
+  text-align:center;
+  color: #f1f1f1;
+}
+
+.galleryItem:hover p{
+  display: block;
+  padding-top: 10px;
+  background-color: #16161698;
+  padding-bottom: 10px;
+}
+
+.galleryItem:hover{
+  transform: scale(1.02);
+  box-shadow: 2px 2px 5px #313131;
+}
 
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -583,13 +643,15 @@ hr {
 
     /* Mobile Nav Resize */
 
-    @media screen and (max-width:800px) {
+    @media screen and (max-width:1000px) {
 
       #mobileMenuButton {
         margin-left: 40px;
-        padding-top: 30px;
+        margin-top: 20px;
+        padding-top: 5px;
         display: block;
         position: relative;
+        width: 40px;
       }
 
       #mobileNav {
@@ -601,24 +663,29 @@ hr {
         flex-direction: column;
         width: 100%;
         justify-content: center;
+        align-items: center;
       }
 
       header {
         width: 100%;
-        height: 120px;
-        display: block;
+        height: 110px;
+        padding-top: 10px;
+        display: flex;
         top: 0;
         position: absolute;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
       }
 
 
         .logo {
           display: flex;
           flex-direction: column;
-          padding-top: 14px;
-          z-index: 5;
+          padding-top: 100px;
           margin-left: 40%;
           margin-right: 40%;
+          
         }
 
         .logo img{
@@ -678,10 +745,14 @@ hr {
           padding-top: 50px;
           justify-content: center;
           margin: auto;
+          margin-top: 10px;
+          /* outline: 2px solid red; */
+          max-width: 100%;
         }
 
         .projectCover {
-          max-width: 80%;
+          max-width: 20%;
+          min-width: 390px;
         }
 
         /* About page Resize */
@@ -713,11 +784,13 @@ hr {
           width: 90%;
         }
         
-        /* Homepage Resize */
+        /* UX/UI resize */
 
         .coverDot {
           display: none;
         }
+
+
 
         /* Resume Resize */
 
@@ -727,6 +800,14 @@ hr {
           justify-content: center;
           margin-left: 0;
           margin-top: 30px;
+        }
+
+        .heroResume p{
+          font-size:default;
+        }
+
+        .heroResume h1{
+          font-size:default;
         }
     }
 
@@ -742,3 +823,4 @@ hr {
         padding: 20px 20% 50px 20%;
       }
     }
+
