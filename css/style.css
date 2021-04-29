@@ -526,8 +526,8 @@ hr {
 /* Graphic Design Gallery */
 
 .designGallery {
-  display: block;
-  margin-left: 220px;
+  display: flex;
+  margin-left: 200px;
   margin-right: 5px;
   /* outline: 2px solid red; */
   justify-content: center;
@@ -585,7 +585,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 120px;
+  border-radius: 300px;
   margin-left: 25%;
   margin-right: 25%;
 }
