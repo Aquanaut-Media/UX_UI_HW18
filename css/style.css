@@ -592,16 +592,11 @@ hr {
 
 
 #Shel {
-  background-image:url(../image/graphic_design_gallery/graphic_preview/shel_preview.png);
   grid-area: shel;
-  aspect-ratio: 1;
 }
 
 #SausageQuest {
-  background-image:url(../image/graphic_design_gallery/graphic_preview/sausage_quest_preview.png);
   grid-area: sausagequest;
-  aspect-ratio: 1;
-  
 }
 
 
