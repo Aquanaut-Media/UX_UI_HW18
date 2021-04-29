@@ -529,15 +529,16 @@ hr {
   display: block;
   margin-left: 220px;
   margin-right: 5px;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   justify-content: center;
 }
 
 .designGallery h1 {
   text-align: center;
-  font-size: 32px;
+  font-size: 200%;
   letter-spacing: 6px;
-  
+  text-transform: capitalize;
+  line-height: 45px;
 }
 
 .grid-wrapper {
@@ -547,39 +548,46 @@ hr {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(6 1fr);
-  grid-template-rows: repeat(8 1fr);
-  row-gap: 1px;
-  column-gap: 1px;
+  row-gap: 6px;
+  column-gap: 6px;
+  grid-template-rows: repeat(6, 28vmin);
+  grid-template-columns: repeat(5, 28vmin);
   grid-template-areas: 
-      "pageTitle pageTitle pageTitle row1Col-6 solidified solidified "
-      "avalanche avalanche sausagequest row2Col-4 leftReckoning leftReckoning"
-      "avalanche avalanche row3Col-3 row3Col-4 leftReckoning leftReckoning"
-      "row4Col-1 shel shel row4Col-4 row4Col-5 row4Col-6"
-      "row5Col-1 shel shel row5Col-4 row5Col-5 row5Col-6"
-      "row6Col-1 row6Col-2 row6Col-3 row6Col-4 row6Col-5 row6Col-6"
-      "row7Col-1 row7Col-2 row7Col-3 row7Col-4 row7Col-5 row7Col-6"
-      "row8Col-1 row8Col-2 row8Col-3 row8Col-4 row8Col-5 row8Col-6";
+      "pageTitle pageTitle aquanautSports solidified solidified "
+      "avalanche avalanche sausagequest adornwell hammered"
+      "avalanche avalanche handwork leftReckoning leftReckoning"
+      "designAd shel shel leftReckoning leftReckoning"
+      "designAd shel shel  overman overman"
+      "row6Col-1 aquaApe  aquaApe aqmspn row6Col-6"
 }
 
 
 
 
 .galleryItem {
-  min-height: 1vw;
-  min-width: 1vw;
-  outline: 2px solid red;
+  outline: 1px solid #afafaf;
   transition:transform .2s ease-in-out;
   background-position: center;
   background-size: cover;
   margin: 3px;
+  position: relative;
+}
+
+.galleryItem img{
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #pageTitle {
   grid-area: pageTitle;
   background-color: #161616;
   color: #f1f1f1;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 120px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 
@@ -596,11 +604,11 @@ hr {
   
 }
 
+
 #Avalanche {
-  background-image:url(/image/graphic_design_gallery/graphic_preview/avalanche_preview.jpg);
   grid-area: avalanche;
-  aspect-ratio: 1;
 }
+
 
 #Left-Reckoning {
   background-image:url(/image/graphic_design_gallery/left_reckoning.png);
@@ -614,23 +622,76 @@ hr {
   aspect-ratio: inherit;
 }
 
+#AquanautSports {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/aquanaut_preview.png);
+  grid-area: aquanautSports;
+  aspect-ratio: 1;
+}
+
+#AdornWell {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/adornwell_preview.png);
+  grid-area: adornwell;
+  aspect-ratio: 1;
+}
+
+#Hammered {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/hammered_preview.jpg);
+  grid-area: hammered;
+  aspect-ratio: 1;
+}
+
+#Overman {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/Overman_preview.png);
+  grid-area: overman;
+  aspect-ratio: inherit;
+}
+
+#Handwork {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/handwork_preview.jpg);
+  grid-area: handwork;
+}
+
+#designAd {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/nic_design_preview.png);
+  grid-area: designAd;
+  aspect-ratio: inherit;
+}
+
+#aquaApe {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/aquaape_preview.png);
+  grid-area: aquaApe;
+  aspect-ratio: inherit;
+}
+
+#AQMSPN {
+  background-image: url(/image/graphic_design_gallery/graphic_preview/aqmspn_preview.png);
+  grid-area: aqmspn;
+  aspect-ratio: inherit;
+}
+
 .galleryItem p{
   display: none;
   text-align:center;
   color: #f1f1f1;
+  position: absolute;
+  top: 8px;
+  left: 40px;
 }
 
+/*
 .galleryItem:hover p{
   display: block;
-  padding-top: 10px;
-  background-color: #16161698;
-  padding-bottom: 10px;
 }
+
+*/
 
 .galleryItem:hover{
   transform: scale(1.02);
   box-shadow: 2px 2px 5px #313131;
 }
+
+
+
 
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
