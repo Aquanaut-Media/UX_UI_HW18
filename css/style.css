@@ -585,20 +585,20 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 300px;
+  border-radius: 100%;
   margin-left: 25%;
   margin-right: 25%;
 }
 
 
 #Shel {
-  background-image:url(/image/graphic_design_gallery/graphic_preview/shel_preview.png);
+  background-image:url(../image/graphic_design_gallery/graphic_preview/shel_preview.png);
   grid-area: shel;
   aspect-ratio: 1;
 }
 
 #SausageQuest {
-  background-image:url(/image/graphic_design_gallery/graphic_preview/sausage_quest_preview.png);
+  background-image:url(../image/graphic_design_gallery/graphic_preview/sausage_quest_preview.png);
   grid-area: sausagequest;
   aspect-ratio: 1;
   
@@ -611,60 +611,60 @@ hr {
 
 
 #Left-Reckoning {
-  background-image:url(/image/graphic_design_gallery/left_reckoning.png);
+  background-image:url(../image/graphic_design_gallery/left_reckoning.png);
   grid-area: leftReckoning;
   aspect-ratio: 1;
 }
 
 #Solidified {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/solidified_preview.jpg);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/solidified_preview.jpg);
   grid-area: solidified;
   aspect-ratio: inherit;
 }
 
 #AquanautSports {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/aquanaut_preview.png);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/aquanaut_preview.png);
   grid-area: aquanautSports;
   aspect-ratio: 1;
 }
 
 #AdornWell {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/adornwell_preview.png);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/adornwell_preview.png);
   grid-area: adornwell;
   aspect-ratio: 1;
 }
 
 #Hammered {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/hammered_preview.jpg);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/hammered_preview.jpg);
   grid-area: hammered;
   aspect-ratio: 1;
 }
 
 #Overman {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/Overman_preview.png);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/Overman_preview.png);
   grid-area: overman;
   aspect-ratio: inherit;
 }
 
 #Handwork {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/handwork_preview.jpg);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/handwork_preview.jpg);
   grid-area: handwork;
 }
 
 #designAd {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/nic_design_preview.png);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/nic_design_preview.png);
   grid-area: designAd;
   aspect-ratio: inherit;
 }
 
 #aquaApe {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/aquaape_preview.png);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/aquaape_preview.png);
   grid-area: aquaApe;
   aspect-ratio: inherit;
 }
 
 #AQMSPN {
-  background-image: url(/image/graphic_design_gallery/graphic_preview/aqmspn_preview.png);
+  background-image: url(../image/graphic_design_gallery/graphic_preview/aqmspn_preview.png);
   grid-area: aqmspn;
   aspect-ratio: inherit;
 }
